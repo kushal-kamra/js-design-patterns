@@ -24,3 +24,27 @@ class SUV extends Car {
 const cx5 = new SUV(5, 'V8', 'Blue', 4);
 
 console.log(cx5);
+
+//Singleton Pattern
+
+let instance = null;
+
+class Bike {
+    constructor(wheels, color) {
+        if(!instance) {
+            this.wheels = wheels;
+            this.color = color;
+            instance = this;
+        } else {
+            return instance;
+        }
+    }
+}
+
+const harley = new Bike(2, 'Black');
+
+console.log(harley);
+
+const ducati = new Bike(2, 'Red');
+
+console.log(ducati);
