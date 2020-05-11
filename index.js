@@ -110,3 +110,16 @@ console.log(vehicleGoodCycle);
 
 const vehicleCivicCar = vehicleFactory.createVehicle('car', 'civic');
 console.log(vehicleCivicCar);
+
+// Mixin Pattern
+
+let carMixin = {
+    revEngine() {
+        console.log(`This ${this.engine} engine is doing Vroom Vroom!`);
+    }
+}
+
+Object.assign(Car.prototype, carMixin);
+
+const vehicleEsteemCar = vehicleFactory.createVehicle('car', 'esteem');
+vehicleEsteemCar.revEngine();
