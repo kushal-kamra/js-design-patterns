@@ -48,3 +48,31 @@ console.log(harley);
 const ducati = new Bike(2, 'Red');
 
 console.log(ducati);
+
+// Factory Pattern
+
+class Cycle {
+    constructor(body, color) {
+        this.body = body;
+        this.color = color;
+    }
+}
+
+class CycleFactory {
+    createCycle(type) {
+        switch(type) {
+            case 'ok':
+                return new Cycle('steel', 'black')
+            case 'good':
+                return new Cycle('aluminium', 'grey')
+        }
+    }
+}
+
+const factory = new CycleFactory();
+
+const myOkCycle = factory.createCycle('ok');
+console.log(myOkCycle);
+
+const myGoodCycle = factory.createCycle('good');
+console.log(myGoodCycle);
