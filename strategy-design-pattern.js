@@ -28,18 +28,21 @@ class Vehicle {
 
 class OffroadVehicle extends Vehicle {
     constructor() {
+        //constructor injection
         super(new SportsDriveStrategy());
     }
 }
 
 class SportsVehicle extends Vehicle {
     constructor() {
+        //constructor injection
         super(new SportsDriveStrategy());
     }
 }
 
 class GoodsVehicle extends Vehicle {
     constructor() {
+        //constructor injection        
         super(new NormalDriveStrategy());
     }
 }
