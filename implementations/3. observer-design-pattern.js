@@ -1,11 +1,12 @@
 class NotificationAlertObserver {
     update() {
-        throw new error('Implement notification alert for observer update');
+        throw new Error('Implement notification alert for observer update');
     }
 }
 
-class EmailNotificationAlertObserver {
+class EmailNotificationAlertObserver extends NotificationAlertObserver{
     constructor(emailId, observable) {
+        super();
         this.emailId = emailId;
         this.observable = observable;
     }
@@ -19,8 +20,9 @@ class EmailNotificationAlertObserver {
     }
 }
 
-class SmsNotificationAlertObserver {
+class SmsNotificationAlertObserver extends NotificationAlertObserver{
     constructor(number, observable) {
+        super();
         this.number = number;
         this.observable = observable;
     }
@@ -36,23 +38,23 @@ class SmsNotificationAlertObserver {
 
 class StockObservable {
     add(observer) {
-        throw new error('Implement add observer!');
+        throw new Error('Implement add observer!');
     }
 
     remove(func) {
-        throw new error('Implement remove observer!');
+        throw new Error('Implement remove observer!');
     }
 
     notifySubscribers() {
-        throw new error('Implement notify subscribers!');
+        throw new Error('Implement notify subscribers!');
     }
 
     addStockCount(stock) {
-        throw new error('Implement add stock count');
+        throw new Error('Implement add stock count');
     }
 
     getStockCount() {
-        throw new error('Implement get stock count');
+        throw new Error('Implement get stock count');
     }
 }
 

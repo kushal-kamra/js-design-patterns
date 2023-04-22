@@ -1,6 +1,6 @@
 class DriveStrategy {
     drive() {
-        throw new error ("Implement drive!");
+        throw new Error("Implement drive!");
     }
 };
 
