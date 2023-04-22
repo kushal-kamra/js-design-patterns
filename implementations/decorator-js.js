@@ -109,7 +109,7 @@ let data_response_time = (fn) => {
 let test_request_data = async () => {
     request_data = data_response_time(request_data);
     const data = await request_data('https://jsonplaceholder.typicode.com/posts');
-    console.log(data);
+    // console.log(data);
 }
 
 test_request_data();
