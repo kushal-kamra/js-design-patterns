@@ -38,12 +38,22 @@ class SportsVehicle extends Vehicle {
         //constructor injection
         super(new SportsDriveStrategy());
     }
+
+    drive() {
+        console.log('Sports vehicle driving');
+        super.drive();
+    }
 }
 
 class GoodsVehicle extends Vehicle {
     constructor() {
         //constructor injection        
         super(new NormalDriveStrategy());
+    }
+
+    drive() {
+        console.log('Goods vehicle driving');
+        super.drive();
     }
 }
 
